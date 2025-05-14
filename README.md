@@ -1,0 +1,2 @@
+# TrainerApp
+Aplikacija za trenere
