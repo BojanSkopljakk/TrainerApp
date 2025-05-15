@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|c:\\users\\bojan\\source\\repos\\trainerapp\\trainerapp\\trainerapp\\controllers\\trainingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|solutionrelative:trainerapp\\controllers\\trainingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|c:\\users\\bojan\\source\\repos\\trainerapp\\trainerapp\\trainerapp\\services\\trainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|solutionrelative:trainerapp\\services\\trainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|c:\\users\\bojan\\source\\repos\\trainerapp\\trainerapp\\trainerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|solutionrelative:trainerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|c:\\users\\bojan\\source\\repos\\trainerapp\\trainerapp\\trainerapp\\services\\itrainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|solutionrelative:trainerapp\\services\\itrainingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|c:\\users\\bojan\\source\\repos\\trainerapp\\trainerapp\\trainerapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|solutionrelative:trainerapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -11,20 +27,12 @@
       "RelativeMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|solutionrelative:trainerapp\\migrations\\20250514162205_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|c:\\users\\bojan\\source\\repos\\trainerapp\\trainerapp\\trainerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|solutionrelative:trainerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|c:\\users\\bojan\\source\\repos\\trainerapp\\trainerapp\\trainerapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|solutionrelative:trainerapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|c:\\users\\bojan\\source\\repos\\trainerapp\\trainerapp\\trainerapp\\data\\booktrainingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|solutionrelative:trainerapp\\data\\booktrainingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|c:\\users\\bojan\\source\\repos\\trainerapp\\trainerapp\\trainerapp\\controllers\\trainingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|solutionrelative:trainerapp\\controllers\\trainingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDE5F235-6FF8-4EDC-BE74-6D2E403895C9}|TrainerApp\\TrainerApp.csproj|c:\\users\\bojan\\source\\repos\\trainerapp\\trainerapp\\trainerapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,24 +54,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "20250514162205_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Migrations\\20250514162205_InitialCreate.cs",
-              "RelativeDocumentMoniker": "TrainerApp\\Migrations\\20250514162205_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Migrations\\20250514162205_InitialCreate.cs",
-              "RelativeToolTip": "TrainerApp\\Migrations\\20250514162205_InitialCreate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "TrainingService.cs",
+              "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Services\\TrainingService.cs",
+              "RelativeDocumentMoniker": "TrainerApp\\Services\\TrainingService.cs",
+              "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Services\\TrainingService.cs",
+              "RelativeToolTip": "TrainerApp\\Services\\TrainingService.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwBoAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T16:22:05.57Z",
+              "WhenOpened": "2025-05-15T11:31:52.333Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ITrainingService.cs",
+              "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Services\\ITrainingService.cs",
+              "RelativeDocumentMoniker": "TrainerApp\\Services\\ITrainingService.cs",
+              "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Services\\ITrainingService.cs",
+              "RelativeToolTip": "TrainerApp\\Services\\ITrainingService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:30:36.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\appsettings.json",
               "RelativeDocumentMoniker": "TrainerApp\\appsettings.json",
@@ -76,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "TrainerApp\\Data\\ApplicationDbContext.cs",
@@ -84,25 +105,24 @@
               "RelativeToolTip": "TrainerApp\\Data\\ApplicationDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T16:15:39.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T16:15:39.773Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "TrainingController.cs",
               "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Controllers\\TrainingController.cs",
               "RelativeDocumentMoniker": "TrainerApp\\Controllers\\TrainingController.cs",
               "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Controllers\\TrainingController.cs",
               "RelativeToolTip": "TrainerApp\\Controllers\\TrainingController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T16:01:05.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "BookTrainingDto.cs",
               "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Data\\BookTrainingDto.cs",
               "RelativeDocumentMoniker": "TrainerApp\\Data\\BookTrainingDto.cs",
@@ -110,47 +130,7 @@
               "RelativeToolTip": "TrainerApp\\Data\\BookTrainingDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T15:59:49.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TrainingSession.cs",
-              "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\TrainingSession.cs",
-              "RelativeDocumentMoniker": "TrainerApp\\Models\\TrainingSession.cs",
-              "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\TrainingSession.cs",
-              "RelativeToolTip": "TrainerApp\\Models\\TrainingSession.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T15:58:56.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\User.cs",
-              "RelativeDocumentMoniker": "TrainerApp\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\User.cs",
-              "RelativeToolTip": "TrainerApp\\Models\\User.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAYAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T15:56:51.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Trainer.cs",
-              "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\Trainer.cs",
-              "RelativeDocumentMoniker": "TrainerApp\\Models\\Trainer.cs",
-              "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\Trainer.cs",
-              "RelativeToolTip": "TrainerApp\\Models\\Trainer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T15:53:41.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T15:59:49.418Z"
             },
             {
               "$type": "Document",
@@ -160,10 +140,58 @@
               "RelativeDocumentMoniker": "TrainerApp\\Program.cs",
               "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Program.cs",
               "RelativeToolTip": "TrainerApp\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T15:50:21.429Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250514162205_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Migrations\\20250514162205_InitialCreate.cs",
+              "RelativeDocumentMoniker": "TrainerApp\\Migrations\\20250514162205_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Migrations\\20250514162205_InitialCreate.cs",
+              "RelativeToolTip": "TrainerApp\\Migrations\\20250514162205_InitialCreate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T16:22:05.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TrainingSession.cs",
+              "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\TrainingSession.cs",
+              "RelativeDocumentMoniker": "TrainerApp\\Models\\TrainingSession.cs",
+              "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\TrainingSession.cs",
+              "RelativeToolTip": "TrainerApp\\Models\\TrainingSession.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:58:56.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "TrainerApp\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\User.cs",
+              "RelativeToolTip": "TrainerApp\\Models\\User.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAYAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:56:51.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Trainer.cs",
+              "DocumentMoniker": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\Trainer.cs",
+              "RelativeDocumentMoniker": "TrainerApp\\Models\\Trainer.cs",
+              "ToolTip": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\Models\\Trainer.cs",
+              "RelativeToolTip": "TrainerApp\\Models\\Trainer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:53:41.914Z"
             }
           ]
         }

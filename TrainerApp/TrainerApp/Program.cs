@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TrainerApp.Data;
+using TrainerApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 
 var app = builder.Build();
+builder.Services.AddScoped<ITrainingService, TrainingService>();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
