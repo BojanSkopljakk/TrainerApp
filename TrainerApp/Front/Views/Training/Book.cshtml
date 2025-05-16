@@ -1,0 +1,42 @@
+﻿@model TrainerApp.DTOs.BookTrainingDto
+@{
+    ViewData["Title"] = "Book Training";
+}
+
+<h2>Book a Training Session</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div style="color: red">@ViewBag.Error</div>
+}
+@if (ViewBag.Success != null)
+{
+    <div style="color: green">@ViewBag.Success</div>
+}
+
+<form asp-action="Book" method="post">
+    <div>
+        <label>Full Name</label>
+        <input asp-for="FullName" required />
+    </div>
+    <div>
+        <label>Phone Number</label>
+        <input asp-for="PhoneNumber" required />
+    </div>
+    <div>
+        <label>Trainer ID</label>
+        <input asp-for="TrainerId" required type="number" />
+    </div>
+    <div>
+        <label>Start Time</label>
+        <input asp-for="StartTime" required type="datetime-local" />
+    </div>
+    <div>
+        <label>Duration (minutes)</label>
+        <select asp-for="DurationMinutes">
+            <option value="30">30</option>
+            <option value="60">60</option>
+        </select>
+    </div>
+    <button type="submit">Book</button>
+</form>

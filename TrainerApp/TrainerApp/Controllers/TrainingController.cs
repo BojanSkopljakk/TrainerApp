@@ -25,5 +25,16 @@ namespace TrainerApp.Controllers
 
             return Ok(new { message = "Training booked successfully." });
         }
+
+        [HttpPost("cancel")]
+        public async Task<IActionResult> CancelTraining([FromBody] CancelTrainingDto dto)
+        {
+            var success = await _trainingService.CancelTrainingAsync(dto);
+            if (!success)
+                return BadRequest("Unable to cancel training.");
+
+            return Ok(new { message = "Training canceled successfully." });
+        }
+
     }
 }

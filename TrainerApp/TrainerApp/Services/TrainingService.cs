@@ -48,5 +48,28 @@ namespace TrainerApp.Services
             await _context.SaveChangesAsync();
             return true;
         }
+        public async Task<bool> CancelTrainingAsync(CancelTrainingDto dto)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.PhoneNumber == dto.PhoneNumber);
+            if (user == null)
+                return false;
+
+            var session = await _context.TrainingSessions
+                .FirstOrDefaultAsync(s => s.UserId == user.Id && s.StartTime == dto.SessionStartTime);
+
+            if (session == null)
+                return false;
+
+            var cancelLimitHours = 24; 
+            var now = DateTime.UtcNow;
+
+            if ((session.StartTime - now).TotalHours < cancelLimitHours)
+                return false; // Previse je kasno za otkazivanje
+
+            _context.TrainingSessions.Remove(session);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
     }
 }

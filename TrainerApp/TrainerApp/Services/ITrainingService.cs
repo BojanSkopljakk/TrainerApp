@@ -5,5 +5,7 @@ namespace TrainerApp.Services
     public interface ITrainingService
     {
         Task<bool> BookTrainingAsync(BookTrainingDto dto);
+        Task<bool> CancelTrainingAsync(CancelTrainingDto dto);
+
     }
 }

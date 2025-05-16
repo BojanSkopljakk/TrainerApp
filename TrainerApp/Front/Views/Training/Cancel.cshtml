@@ -1,0 +1,27 @@
+﻿@model TrainerApp.DTOs.CancelTrainingDto
+@{
+    ViewData["Title"] = "Cancel Training";
+}
+
+<h2>Cancel a Training Session</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div style="color: red">@ViewBag.Error</div>
+}
+@if (ViewBag.Success != null)
+{
+    <div style="color: green">@ViewBag.Success</div>
+}
+
+<form asp-action="Cancel" method="post">
+    <div>
+        <label>Phone Number</label>
+        <input asp-for="PhoneNumber" required />
+    </div>
+    <div>
+        <label>Session Start Time</label>
+        <input asp-for="SessionStartTime" required type="datetime-local" />
+    </div>
+    <button type="submit">Cancel Session</button>
+</form>
