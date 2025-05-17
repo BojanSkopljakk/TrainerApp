@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TrainerApp.Data;
 using TrainerApp.Services;
 
@@ -8,14 +9,19 @@ namespace Front.Controllers
     {
         private readonly ITrainingService _trainingService;
 
-        public TrainingController(ITrainingService trainingService)
+        private readonly ApplicationDbContext _context;
+
+        public TrainingController(ITrainingService trainingService, ApplicationDbContext context)
         {
             _trainingService = trainingService;
+            _context = context;
         }
 
         [HttpGet]
-        public IActionResult Book()
+        public async Task<IActionResult> Book()
         {
+            var trainers = await _context.Trainers.ToListAsync();
+            ViewBag.Trainers = trainers;
             return View();
         }
 
@@ -33,7 +39,7 @@ namespace Front.Controllers
             }
 
             ViewBag.Success = "Training booked successfully!";
-            return View();
+            return RedirectToAction(nameof(Book));
         }
 
         [HttpGet]
@@ -58,6 +64,23 @@ namespace Front.Controllers
             ViewBag.Success = "Training canceled successfully.";
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Calendar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Calendar(TrainerCalendarDto dto)
+        {
+            var sessions = await _trainingService.GetTrainerScheduleAsync(dto.AccessCode, dto.Date, dto.ViewType);
+            ViewBag.Sessions = sessions;
+            ViewBag.Date = dto.Date.ToShortDateString();
+            ViewBag.Type = dto.ViewType;
+            return View();
+        }
+
 
     }
 }

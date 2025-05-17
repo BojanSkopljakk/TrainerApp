@@ -41,6 +41,26 @@ namespace TrainerApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Trainers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AccessCode = "ana123",
+                            Name = "Ana Petrović"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AccessCode = "marko123",
+                            Name = "Marko Jovanović"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AccessCode = "ivana123",
+                            Name = "Ivana Milinković"
+                        });
                 });
 
             modelBuilder.Entity("TrainerApp.Models.TrainingSession", b =>

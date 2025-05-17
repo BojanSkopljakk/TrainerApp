@@ -71,5 +71,25 @@ namespace TrainerApp.Services
             return true;
         }
 
+        public async Task<List<TrainingSession>> GetTrainerScheduleAsync(string accessCode, DateTime date, string viewType)
+        {
+            var trainer = await _context.Trainers.FirstOrDefaultAsync(t => t.AccessCode == accessCode);
+            if (trainer == null) return new List<TrainingSession>();
+
+            DateTime start = date.Date;
+            DateTime end = viewType == "weekly"
+                ? start.AddDays(7)
+                : start.AddDays(1);
+
+            return await _context.TrainingSessions
+                .Include(s => s.User)
+                .Where(s => s.TrainerId == trainer.Id &&
+                            s.StartTime >= start &&
+                            s.StartTime < end)
+                .OrderBy(s => s.StartTime)
+                .ToListAsync();
+        }
+
+
     }
 }

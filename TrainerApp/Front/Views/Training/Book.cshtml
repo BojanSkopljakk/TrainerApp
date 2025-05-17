@@ -1,6 +1,7 @@
-﻿@model TrainerApp.DTOs.BookTrainingDto
+﻿@model TrainerApp.Data.BookTrainingDto
 @{
     ViewData["Title"] = "Book Training";
+    var trainers = ViewBag.Trainers as List<TrainerApp.Models.Trainer>;
 }
 
 <h2>Book a Training Session</h2>
@@ -24,8 +25,14 @@
         <input asp-for="PhoneNumber" required />
     </div>
     <div>
-        <label>Trainer ID</label>
-        <input asp-for="TrainerId" required type="number" />
+        <label>Trainer</label>
+        <select asp-for="TrainerId" class="form-control">
+            <option value="">-- Select Trainer --</option>
+            @foreach (var t in trainers)
+            {
+                <option value="@t.Id">@t.Name</option>
+            }
+        </select>
     </div>
     <div>
         <label>Start Time</label>

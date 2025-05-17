@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "i/zlQsTTgr6jwcJc2Bpr7nTyD8egobSz/EyG4JRCHow=",
+  "Hash": "a+Wo6QTfAzfLkP47ou107NxyzSj58jQanoqht/sNWgQ=",
   "Source": "Front",
   "BasePath": "_content/Front",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\bojan\\source\\repos\\TrainerApp\\TrainerApp\\TrainerApp\\TrainerApp.csproj",
+      "Version": 2,
+      "Source": "TrainerApp",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "Front\\wwwroot",

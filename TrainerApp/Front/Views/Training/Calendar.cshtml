@@ -1,0 +1,56 @@
+﻿@model TrainerApp.Data.TrainerCalendarDto
+@{
+    ViewData["Title"] = "Trainer Calendar";
+    var sessions = ViewBag.Sessions as List<TrainerApp.Models.TrainingSession>;
+}
+
+<h2>Trainer Calendar</h2>
+
+<form asp-action="Calendar" method="post">
+    <div>
+        <label>Access Code</label>
+        <input asp-for="AccessCode" required />
+    </div>
+    <div>
+        <label>Date</label>
+        <input asp-for="Date" type="date" required />
+    </div>
+    <div>
+        <label>View Type</label>
+        <select asp-for="ViewType">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+        </select>
+    </div>
+    <button type="submit">View Calendar</button>
+</form>
+
+@if (sessions != null && sessions.Any())
+{
+    <h4>Results for @ViewBag.Date (@ViewBag.Type)</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Duration</th>
+                <th>User</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in sessions)
+            {
+                <tr>
+                    <td>@s.StartTime.ToString("HH:mm")</td>
+                    <td>@s.DurationMinutes min</td>
+                    <td>@s.User.FullName</td>
+                    <td>@s.User.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else if (ViewBag.Sessions != null)
+{
+    <p>No sessions found for this time range.</p>
+}
