@@ -10,6 +10,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 
 builder.Services.AddScoped<ITrainingService, TrainingService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

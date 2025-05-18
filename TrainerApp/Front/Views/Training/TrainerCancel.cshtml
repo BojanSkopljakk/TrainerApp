@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Trainer Cancel Session";
+    var sessions = ViewBag.Sessions as List<TrainerApp.Models.TrainingSession>;
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title mb-4 text-center">Trainer: Cancel a Session</h3>
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">@ViewBag.Error</div>
+                    }
+
+                    @if (ViewBag.Success != null)
+                    {
+                        <div class="alert alert-success">@ViewBag.Success</div>
+                    }
+
+                    
+                    <form asp-action="TrainerCancel" method="post">
+                        <div class="mb-3">
+                            <label>Trainer Access Code</label>
+                            <input name="AccessCode" class="form-control" required />
+                        </div>
+                        <button type="submit" class="btn btn-secondary w-100">Show My Sessions</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (sessions != null && sessions.Any())
+    {
+        <div class="row mt-4">
+            <div class="col-md-10 offset-md-1">
+                <h4 class="mb-3 text-center">Upcoming Sessions</h4>
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Time</th>
+                            <th>Duration</th>
+                            <th>User</th>
+                            <th>Phone</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var s in sessions)
+                        {
+                            <tr>
+                                <td>@s.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td>@s.DurationMinutes min</td>
+                                <td>@s.User.FullName</td>
+                                <td>@s.User.PhoneNumber</td>
+                                <td>
+                                    <form asp-action="ConfirmCancel" method="post" style="display:inline;">
+                                        <input type="hidden" name="AccessCode" value="@s.Trainer.AccessCode" />
+                                        <input type="hidden" name="SessionStartTime" value="@s.StartTime.ToString("O")" />
+                                        <button type="submit" class="btn btn-danger btn-sm">Cancel</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else if (ViewBag.Sessions != null)
+    {
+        <div class="alert alert-info text-center mt-4">No upcoming sessions found.</div>
+    }
+</div>

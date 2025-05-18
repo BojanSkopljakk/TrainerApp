@@ -1,8 +1,18 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Welcome";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4 mb-4">Welcome to the Trainer App</h1>
+        <p class="lead mb-4">
+            Organize training sessions with ease. Book, cancel, and manage your schedule effortlessly.
+        </p>
+
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mt-4">
+            <a class="btn btn-primary btn-lg" asp-controller="Training" asp-action="Book">Book a Session</a>
+            <a class="btn btn-outline-secondary btn-lg" asp-controller="Training" asp-action="Cancel">Cancel Session</a>
+            <a class="btn btn-dark btn-lg" asp-controller="Training" asp-action="Calendar">Trainer Calendar</a>
+        </div>
+    </div>
 </div>

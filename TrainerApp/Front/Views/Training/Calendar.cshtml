@@ -4,53 +4,75 @@
     var sessions = ViewBag.Sessions as List<TrainerApp.Models.TrainingSession>;
 }
 
-<h2>Trainer Calendar</h2>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title mb-4 text-center">Trainer Calendar</h3>
 
-<form asp-action="Calendar" method="post">
-    <div>
-        <label>Access Code</label>
-        <input asp-for="AccessCode" required />
-    </div>
-    <div>
-        <label>Date</label>
-        <input asp-for="Date" type="date" required />
-    </div>
-    <div>
-        <label>View Type</label>
-        <select asp-for="ViewType">
-            <option value="daily">Daily</option>
-            <option value="weekly">Weekly</option>
-        </select>
-    </div>
-    <button type="submit">View Calendar</button>
-</form>
+                    <form asp-action="Calendar" method="post">
+                        <div class="mb-3">
+                            <label asp-for="AccessCode" class="form-label">Trainer Access Code</label>
+                            <input asp-for="AccessCode" class="form-control" required />
+                        </div>
 
-@if (sessions != null && sessions.Any())
-{
-    <h4>Results for @ViewBag.Date (@ViewBag.Type)</h4>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Duration</th>
-                <th>User</th>
-                <th>Phone</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var s in sessions)
-            {
-                <tr>
-                    <td>@s.StartTime.ToString("HH:mm")</td>
-                    <td>@s.DurationMinutes min</td>
-                    <td>@s.User.FullName</td>
-                    <td>@s.User.PhoneNumber</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-else if (ViewBag.Sessions != null)
-{
-    <p>No sessions found for this time range.</p>
-}
+                        <div class="mb-3">
+                            <label asp-for="Date" class="form-label">Date</label>
+                            <input asp-for="Date" type="date" class="form-control" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ViewType" class="form-label">View Type</label>
+                            <select asp-for="ViewType" class="form-select">
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-secondary w-100">View Calendar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (sessions != null)
+    {
+        <div class="row mt-5">
+            <div class="col-md-10 offset-md-1">
+                <h4 class="mb-3 text-center">Schedule for @ViewBag.Date (@ViewBag.Type)</h4>
+
+                @if (sessions.Any())
+                {
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Time</th>
+                                <th>Duration</th>
+                                <th>User</th>
+                                <th>Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var s in sessions)
+                            {
+                                <tr>
+                                    <td>@s.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>@s.DurationMinutes min</td>
+                                    <td>@s.User.FullName</td>
+                                    <td>@s.User.PhoneNumber</td>
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <div class="alert alert-info text-center">No sessions found for this period.</div>
+                }
+            </div>
+        </div>
+    }
+</div>

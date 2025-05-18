@@ -4,46 +4,79 @@
     var trainers = ViewBag.Trainers as List<TrainerApp.Models.Trainer>;
 }
 
-<h2>Book a Training Session</h2>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title mb-4 text-center">Book a Training Session</h3>
 
-@if (ViewBag.Error != null)
-{
-    <div style="color: red">@ViewBag.Error</div>
-}
-@if (ViewBag.Success != null)
-{
-    <div style="color: green">@ViewBag.Success</div>
-}
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">@ViewBag.Error</div>
+                    }
+                    @if (ViewBag.Success != null)
+                    {
+                        <div class="alert alert-success">@ViewBag.Success</div>
+                    }
 
-<form asp-action="Book" method="post">
-    <div>
-        <label>Full Name</label>
-        <input asp-for="FullName" required />
+                    <form asp-action="Book" method="post">
+                        <div class="mb-3">
+                            <label asp-for="FullName" class="form-label">Full Name</label>
+                            <input asp-for="FullName" class="form-control" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+                            <input asp-for="PhoneNumber" class="form-control" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="TrainerId" class="form-label">Trainer</label>
+                            <select asp-for="TrainerId" class="form-select" required>
+                                <option value="">-- Select Trainer --</option>
+                                @foreach (var t in trainers)
+                                {
+                                    <option value="@t.Id">@t.Name</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="StartTime" class="form-label">Start Time</label>
+                            <div class="mb-3">
+                                <label>Date</label>
+                                <input type="date" name="DatePart" class="form-control" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Time</label>
+                                <select name="TimePart" class="form-select" required>
+                                    @{
+                                        for (int hour = 0; hour < 24; hour++)
+                                        {
+                                            <option value="@($"{hour:D2}:00")">@($"{hour:D2}:00")</option>
+                                            <option value="@($"{hour:D2}:30")">@($"{hour:D2}:30")</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="DurationMinutes" class="form-label">Duration</label>
+                            <select asp-for="DurationMinutes" class="form-select">
+                                <option value="30">30 minutes</option>
+                                <option value="60">60 minutes</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <label>Phone Number</label>
-        <input asp-for="PhoneNumber" required />
-    </div>
-    <div>
-        <label>Trainer</label>
-        <select asp-for="TrainerId" class="form-control">
-            <option value="">-- Select Trainer --</option>
-            @foreach (var t in trainers)
-            {
-                <option value="@t.Id">@t.Name</option>
-            }
-        </select>
-    </div>
-    <div>
-        <label>Start Time</label>
-        <input asp-for="StartTime" required type="datetime-local" />
-    </div>
-    <div>
-        <label>Duration (minutes)</label>
-        <select asp-for="DurationMinutes">
-            <option value="30">30</option>
-            <option value="60">60</option>
-        </select>
-    </div>
-    <button type="submit">Book</button>
-</form>
+</div>

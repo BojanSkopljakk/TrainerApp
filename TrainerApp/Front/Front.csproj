@@ -7,7 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Training\TrainerBook.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TrainerApp\TrainerApp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Training\TrainerBook.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Training\TrainerBook.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Training\TrainerBook.cshtml" />
   </ItemGroup>
 
 </Project>

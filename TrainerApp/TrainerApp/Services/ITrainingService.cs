@@ -8,6 +8,8 @@ namespace TrainerApp.Services
         Task<bool> BookTrainingAsync(BookTrainingDto dto);
         Task<bool> CancelTrainingAsync(CancelTrainingDto dto);
         Task<List<TrainingSession>> GetTrainerScheduleAsync(string accessCode, DateTime date, string viewType);
+        Task<bool> BookByTrainerAsync(TrainerBookDto dto);
+        Task<bool> CancelByTrainerAsync(TrainerCancelDto dto);
 
     }
 }

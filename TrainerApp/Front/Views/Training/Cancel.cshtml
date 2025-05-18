@@ -3,25 +3,50 @@
     ViewData["Title"] = "Cancel Training";
 }
 
-<h2>Cancel a Training Session</h2>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title mb-4 text-center">Cancel a Training Session</h3>
 
-@if (ViewBag.Error != null)
-{
-    <div style="color: red">@ViewBag.Error</div>
-}
-@if (ViewBag.Success != null)
-{
-    <div style="color: green">@ViewBag.Success</div>
-}
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">@ViewBag.Error</div>
+                    }
+                    @if (ViewBag.Success != null)
+                    {
+                        <div class="alert alert-success">@ViewBag.Success</div>
+                    }
 
-<form asp-action="Cancel" method="post">
-    <div>
-        <label>Phone Number</label>
-        <input asp-for="PhoneNumber" required />
+                    <form asp-action="Cancel" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input name="PhoneNumber" class="form-control" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Date</label>
+                            <input name="DatePart" type="date" class="form-control" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Time</label>
+                            <select name="TimePart" class="form-select" required>
+                                @{
+                                    for (int hour = 0; hour < 24; hour++)
+                                    {
+                                        <option value="@($"{hour:D2}:00")">@($"{hour:D2}:00")</option>
+                                        <option value="@($"{hour:D2}:30")">@($"{hour:D2}:30")</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger w-100">Cancel Session</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <label>Session Start Time</label>
-        <input asp-for="SessionStartTime" required type="datetime-local" />
-    </div>
-    <button type="submit">Cancel Session</button>
-</form>
+</div>

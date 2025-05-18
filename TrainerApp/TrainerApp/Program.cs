@@ -17,6 +17,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 var app = builder.Build();
 builder.Services.AddScoped<ITrainingService, TrainingService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 
 // Configure the HTTP request pipeline.
